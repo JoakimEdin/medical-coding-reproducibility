@@ -1,0 +1,7 @@
+name: ReduceLROnPlateau
+configs: 
+  min_lr: 0.0001
+  mode: max
+  factor: 0.9
+  patience: 5
+

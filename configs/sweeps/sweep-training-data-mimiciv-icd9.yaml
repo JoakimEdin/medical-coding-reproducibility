@@ -1,0 +1,34 @@
+program: main.py
+method: grid
+metric:
+  name: val.all.f1_micro_tuned
+  goal: maximize
+parameters:
+  data:
+    value: mimiciv_icd9
+  data.split_filename:
+    values: 
+      - mimiciv_icd9_train_subset_10k.feather
+      - mimiciv_icd9_train_subset_25k.feather
+      - mimiciv_icd9_train_subset_50k.feather
+      - mimiciv_icd9_train_subset_75k.feather
+      - mimiciv_icd9_train_subset_100k.feather
+      - mimiciv_icd9_train_subset_125k.feather
+  experiment:
+    values: 
+      - mimiciii_clean/plm_icd
+      - mimiciii_clean/laat
+      - mimiciii_clean/vanillagru
+      - mimiciii_clean/vanillaconv
+      - mimiciii_clean/caml
+      - mimiciii_clean/multi_res_conv
+  dataloader.num_workers:
+    value: 2
+
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - gpu=-1
+  - ${args_no_hyphens}

@@ -1,0 +1,15 @@
+- name: WandbCallback
+  configs:
+    project: automatic-medical-coding
+    entity: null
+- name: SaveBestModelCallback
+  configs:
+    split: val
+    target: all
+    metric: precision@8
+- name: EarlyStoppingCallback
+  configs:
+    split: val
+    target: all
+    metric: precision@8
+    patience: 10

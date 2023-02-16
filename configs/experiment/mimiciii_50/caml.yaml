@@ -1,0 +1,25 @@
+# @package _global_
+defaults:
+  - override /model: caml
+  - override /text_encoder: word2vec.yaml
+  - override /data: mimiciii_50
+  
+
+optimizer:
+  configs:
+    lr: 1e-4
+
+
+epochs: 200
+
+data.max_length: 2500
+
+
+
+
+
+
+
+
+
+

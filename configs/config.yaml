@@ -1,0 +1,30 @@
+defaults:
+  - _self_
+  - data: defaults
+  - dataset: defaults
+  - dataloader: defaults
+  - model: vanillaconv
+  - text_encoder: defaults
+  - trainer: defaults
+  - optimizer: adam
+  - lr_scheduler: defaults
+  - label_transform: one_hot
+  - text_transform: seq_tokens
+  - metrics: defaults
+  - lookup: defaults
+  - callbacks: defaults
+  - experiment: null
+  
+
+hydra:
+  output_subdir: null
+seed: 1337
+deterministic: false
+gpu:
+  - 6
+name: null
+debug: false
+load_model: null # The path where to find the model, text encoder and label encoder
+
+  
+  

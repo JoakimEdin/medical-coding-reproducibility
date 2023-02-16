@@ -1,0 +1,24 @@
+max_batch_size: 16 #max batch size that can fit in the GPU memory
+batch_size: 16 # The desired batch size. The code will use accumulated gradients if the batch size is bigger than max_batch_size
+num_workers: 0
+drop_last: true
+pin_memory: false
+
+batch_sampler:
+  name: BySequenceLengthSampler
+  configs:
+    bucket_boundaries:
+      - 400
+      - 600
+      - 800
+      - 1000
+      - 1200
+      - 1400
+      - 1600
+      - 1800
+      - 2000
+      - 2200
+      - 2600
+      - 3000
+      - 4000
+

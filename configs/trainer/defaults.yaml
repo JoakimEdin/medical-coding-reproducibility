@@ -1,0 +1,8 @@
+epochs: 200
+validate_on_training_data: true #Validate on the traing set in addition to on the validation set
+print_metrics: false #Print results after each epoch
+use_amp: true #Use mixed precision
+threshold_tuning: false #Picks the optimal threshold based on the validation set
+
+
+

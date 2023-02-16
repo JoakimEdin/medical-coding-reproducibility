@@ -1,0 +1,9 @@
+name: HuggingFaceTokenizer
+configs: 
+  model_path: <path/to/RoBERTa-base-PM-M3-Voc-hf>
+  add_special_token: true
+  padding: false
+  use_fast: true
+  do_lower_case: true
+  max_length: null
+  truncation: false

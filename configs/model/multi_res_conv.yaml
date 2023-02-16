@@ -1,0 +1,6 @@
+name: MultiResCNN
+configs:
+  kernel_sizes: [3,5,9,15,19,25]
+  num_filters: 50
+  embed_dropout: 0.2
+

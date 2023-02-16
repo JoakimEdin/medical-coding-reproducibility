@@ -1,0 +1,7 @@
+name: VanillaRNN
+configs:
+  cell_type: gru
+  num_layers: 1
+  bidirectional: true
+  rnn_dim: 512
+  embed_dropout: 0.2

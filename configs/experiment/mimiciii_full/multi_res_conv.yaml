@@ -1,0 +1,30 @@
+# @package _global_
+defaults:
+  - override /model: multi_res_conv
+  - override /text_encoder: word2vec.yaml
+  - override /data: mimiciii_full
+  - override /lr_scheduler: defaults
+  
+
+dataloader:
+  max_batch_size: 16
+  batch_size: 16
+
+epochs: 500
+
+optimizer:
+  configs:
+    lr: 1e-4
+
+data.max_length: 2500
+  
+
+
+
+
+
+
+
+
+
+

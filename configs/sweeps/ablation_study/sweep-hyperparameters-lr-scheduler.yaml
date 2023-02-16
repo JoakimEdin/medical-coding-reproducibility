@@ -1,0 +1,31 @@
+name: Ablation Study - MultiResCNN - Hyperparameters and LR scheduler
+program: main.py
+method: grid
+metric:
+  name: val.all.f1_micro_tuned
+  goal: maximize
+parameters:
+  experiment:
+    values: 
+      - mimiciii_full/vanillaconv
+      - mimiciii_full/vanillagru
+      - mimiciii_full/caml
+      - mimiciii_full/laat
+      - mimiciii_full/multi_res_conv
+      - mimiciii_full/plm_icd
+  trainer.threshold_tuning: 
+    value: true
+  data: 
+    value: mimiciii_clean
+  data.max_length:
+    value: 4000
+  dataset.configs.max_length_tokens: 
+    value: 20000
+
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - gpu=-1
+  - ${args_no_hyphens}

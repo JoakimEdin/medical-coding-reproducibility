@@ -1,0 +1,6 @@
+name: CAML
+configs:
+  embed_dropout: 0.2
+  num_filters: 50
+  kernel_size: 10
+

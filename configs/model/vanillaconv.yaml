@@ -1,0 +1,5 @@
+name: VanillaConv
+configs:
+  embed_dropout: 0.2
+  num_filters: 500
+  kernel_size: 4

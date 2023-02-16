@@ -1,0 +1,32 @@
+program: main.py
+method: grid
+metric:
+  name: val.all.f1_micro_tuned
+  goal: maximize
+parameters:
+  experiment:
+    values: 
+      - mimiciii_clean/laat
+      - mimiciii_clean/vanillagru
+      - mimiciii_clean/vanillaconv
+      - mimiciii_clean/caml
+      - mimiciii_clean/multi_res_conv
+      - mimiciii_clean/plm_icd
+  data.split_filename:
+    values: 
+      - mimiciii_clean_subsplit_0.2.feather
+      - mimiciii_clean_subsplit_0.4.feather
+      - mimiciii_clean_subsplit_0.6.feather
+      - mimiciii_clean_subsplit_0.8.feather
+  dataloader.num_workers:
+    value: 2
+  optimizer.configs.weight_decay:
+    values: [0, 1e-5, 1e-4, 1e-3, 1e-2]
+
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - gpu=-1
+  - ${args_no_hyphens}

@@ -1,0 +1,6 @@
+name: BOW
+configs: 
+  binary: true
+  max_features: 30000
+  lowercase: true
+  max_df: 0.9

@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - override /model: vanillaconv
+  - override /text_encoder: word2vec.yaml
+  - override /data: mimiciii_full
+  
+  
+
+optimizer:
+  configs:
+    lr: 3e-3
+
+
+epochs: 100
+
+data.max_length: 2500
+
+

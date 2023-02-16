@@ -1,0 +1,30 @@
+# @package _global_
+defaults:
+  - override /model: vanillaconv
+  - override /text_encoder: word2vec.yaml
+  - override /data: mimiciv_icd10
+  - override /lr_scheduler: warmup_linear_decay
+  - override /optimizer: adamw
+  - override /callbacks: mean_average_precision
+
+model:
+  configs:
+    embed_dropout: 0
+  
+optimizer:
+  configs:
+    lr: 1e-3
+    weight_decay: 1e-5
+
+dataloader:
+  max_batch_size: 128
+  batch_size: 8
+
+
+trainer:
+  threshold_tuning: true
+  epochs: 20
+
+data.max_length: 4000
+
+

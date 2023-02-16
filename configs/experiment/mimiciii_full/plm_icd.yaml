@@ -1,0 +1,47 @@
+# @package _global_
+defaults:
+  - override /model: plm_icd
+  - override /text_encoder: defaults
+  - override /data: mimiciii_full
+  - override /lr_scheduler: defaults
+  - override /dataset: huggingface
+  - override /text_transform: huggingface
+  - override /optimizer: adamw
+  
+
+dataloader:
+  max_batch_size: 2
+  batch_size: 8
+
+trainer:
+  epochs: 20
+  threshold_tuning: true
+
+lr_scheduler:
+  name: linear
+  configs:
+    num_warmup_steps: 2000
+  
+
+optimizer:
+  configs:
+    lr: 5e-5
+
+data:
+  max_length: null
+
+text_transform:
+  configs:
+    max_length: 3072
+    truncation: true
+  
+
+
+
+
+
+
+
+
+
+

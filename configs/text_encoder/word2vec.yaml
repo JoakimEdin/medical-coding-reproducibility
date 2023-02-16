@@ -1,0 +1,10 @@
+name: Word2Vec
+file_name: word2vec_full.model
+load_model: true
+configs: 
+  min_document_count: 3 # how many documents a word needs to be in to be used by the word2vec model
+  model_configs:  
+    vector_size: 100
+    min_count: 0
+    workers: 4
+    epochs: 5

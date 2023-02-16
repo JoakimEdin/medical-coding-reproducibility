@@ -1,0 +1,4 @@
+code_description:
+  code_desc_path: /data/je/mimiciii/pre-processed/mullenbach/icd9_descriptions.feather
+  code_column: icd_code
+  desc_column: icd9_description

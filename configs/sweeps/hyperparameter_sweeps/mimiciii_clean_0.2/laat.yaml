@@ -1,0 +1,46 @@
+name: Train 0.2 subset LAAT Hyperparameter Sweep
+program: main.py
+method: random
+metric:
+  name: val.all.f1_micro_tuned
+  goal: maximize
+parameters:
+  experiment:
+    value: mimiciii_clean/laat
+  metrics:
+    value: no_auc
+  optimizer:
+    value: adamw
+  lr_scheduler:
+    value: warmup_linear_decay
+  trainer.epochs:
+    value: 20
+  trainer.threshold_tuning:
+    value: true
+  trainer.validate_on_training_data:
+    value: false
+  data.max_length:
+    value: 4000
+  callbacks:
+    value: sweep
+  optimizer.configs.lr:
+    values: [0.0005, 0.001, 0.005]
+  optimizer.configs.weight_decay:
+    values: [1e-5, 1e-4, 1e-3]
+  model.configs.embed_dropout:
+    values: [0, 0.1, 0.2]
+  dataloader.batch_size:
+    values: [8, 16, 32, 64]
+  data.split_filename:
+    value: mimiciii_clean_subsplit_0.2.feather
+  dataloader.num_workers:
+    value: 2
+
+  
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - gpu=-1
+  - ${args_no_hyphens}

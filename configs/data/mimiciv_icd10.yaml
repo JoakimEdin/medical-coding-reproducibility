@@ -1,0 +1,12 @@
+defaults:
+  - defaults
+dir: files/data/mimiciv_icd10
+data_filename: mimiciv_icd10.feather
+split_filename: mimiciv_icd10_split.feather
+code_column_names:
+  - icd10_diag
+  - icd10_proc
+max_length: 4000
+
+
+

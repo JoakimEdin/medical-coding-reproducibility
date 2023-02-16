@@ -1,0 +1,25 @@
+program: main.py
+name: Fair comparison - old text preprocessing
+method: grid
+metric:
+  name: val.all.f1_micro_tuned
+  goal: maximize
+parameters:
+  seed:
+    values: [0,1,2,3,4,5,6,7,8,9]
+  experiment:
+    values: 
+      - mimiciii_clean/plm_icd
+      - mimiciii_clean/vanillaconv
+      - mimiciii_clean/vanillagru
+      - mimiciii_clean/caml
+      - mimiciii_clean/laat
+      - mimiciii_clean/multi_res_conv
+
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - gpu=-1
+  - ${args_no_hyphens}

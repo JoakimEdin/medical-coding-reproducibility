@@ -1,0 +1,14 @@
+# @package _global_
+defaults:
+  - override /model: vanillagru
+  - override /text_encoder: word2vec.yaml
+  - override /data: mimiciii_50
+  
+optimizer:
+  configs:
+    lr: 3e-3
+
+epochs: 100
+
+data.max_length: 2500
+

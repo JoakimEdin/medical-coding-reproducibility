@@ -1,0 +1,56 @@
+- name: F1Score
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: F1Score
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: Recall
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: Recall
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: Precision
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: Precision
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: FPR
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: FPR
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: ExactMatchRatio
+  configs: 
+    threshold: 0.5
+- name: Precision_K
+  configs: 
+    k: 5
+- name: Precision_K
+  configs: 
+    k: 8
+- name: Precision_K
+  configs: 
+    k: 15
+- name: Recall_K
+  configs: 
+    k: 10
+- name: Recall_K
+  configs: 
+    k: 15
+- name: MeanAveragePrecision
+  configs: {}
+- name: PrecisionAtRecall
+  configs: {}
+- name: LossMetric
+  configs: {}

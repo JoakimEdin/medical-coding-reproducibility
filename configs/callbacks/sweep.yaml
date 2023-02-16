@@ -1,0 +1,11 @@
+- name: WandbCallback
+  configs:
+    project: automatic-medical-coding-sweep
+    entity: null
+    dir: /data/research
+- name: EarlyStoppingCallback
+  configs:
+    split: val
+    target: all
+    metric: map
+    patience: 6

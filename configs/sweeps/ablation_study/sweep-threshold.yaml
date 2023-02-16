@@ -1,0 +1,27 @@
+name: Ablation Study - Threshold Tuning
+program: main.py
+method: grid
+metric:
+  name: val.all.f1_micro_tuned
+  goal: maximize
+parameters:
+  experiment:
+    values: 
+      - mimiciii_clean/vanillaconv
+      - mimiciii_clean/vanillagru
+      - mimiciii_clean/caml
+      - mimiciii_clean/laat
+      - mimiciii_clean/multi_res_conv
+      - mimiciii_clean/plm_icd
+  trainer.threshold_tuning: 
+    value: false
+
+    
+
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - gpu=-1
+  - ${args_no_hyphens}

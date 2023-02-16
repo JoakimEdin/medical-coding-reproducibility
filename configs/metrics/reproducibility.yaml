@@ -1,0 +1,141 @@
+- name: F1Score
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: F1Score
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: Recall
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: Recall
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: Precision
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: Precision
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: FPR
+  configs: 
+    average: "micro"
+    threshold: 0.5
+- name: FPR
+  configs: 
+    average: "macro"
+    threshold: 0.5
+- name: ExactMatchRatio
+  configs: 
+    threshold: 0.5
+- name: Precision_K
+  configs: 
+    k: 1
+- name: Precision_K
+  configs: 
+    k: 5
+- name: Precision_K
+  configs: 
+    k: 8
+- name: Precision_K
+  configs: 
+    k: 15
+- name: Recall_K
+  configs: 
+    k: 10
+- name: Recall_K
+  configs: 
+    k: 15
+- name: MeanAveragePrecision
+  configs: {}
+- name: PrecisionAtRecall
+  configs: {}
+- name: AUC
+  configs: 
+    average: "micro"
+- name: AUC
+  configs: 
+    average: "macro"
+- name: F1Score
+  configs: 
+    average: "micro"
+    threshold: 0.5
+    filter_codes: false
+- name: F1Score
+  configs: 
+    average: "macro"
+    threshold: 0.5
+    filter_codes: false
+- name: Recall
+  configs: 
+    average: "micro"
+    threshold: 0.5
+    filter_codes: false
+- name: Recall
+  configs: 
+    average: "macro"
+    threshold: 0.5
+    filter_codes: false
+- name: Precision
+  configs: 
+    average: "micro"
+    threshold: 0.5
+    filter_codes: false
+- name: Precision
+  configs: 
+    average: "macro"
+    threshold: 0.5
+    filter_codes: false
+- name: FPR
+  configs: 
+    average: "micro"
+    threshold: 0.5
+    filter_codes: false
+- name: FPR
+  configs: 
+    average: "macro"
+    threshold: 0.5
+    filter_codes: false
+- name: ExactMatchRatio
+  configs: 
+    threshold: 0.5
+    filter_codes: false
+- name: Precision_K
+  configs: 
+    k: 1
+    filter_codes: false
+- name: Precision_K
+  configs: 
+    k: 5
+    filter_codes: false
+- name: Precision_K
+  configs: 
+    k: 8
+    filter_codes: false
+- name: Precision_K
+  configs: 
+    k: 15
+    filter_codes: false
+- name: Recall_K
+  configs: 
+    k: 10
+    filter_codes: false
+- name: Recall_K
+  configs: 
+    k: 15
+    filter_codes: false
+- name: MeanAveragePrecision
+  configs: {filter_codes: false}
+- name: PrecisionAtRecall
+  configs: {filter_codes: false}
+- name: AUC
+  configs: 
+    average: "micro"
+    filter_codes: false
+- name: LossMetric
+  configs: {}

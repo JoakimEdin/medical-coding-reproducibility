@@ -1,4 +1,4 @@
 name: PLMICD
 configs:
-  model_path: /data/je/pretrained_models/RoBERTa-base-PM-M3-Voc-hf
+  model_path: /path/to/RoBERTa-base-PM-M3-Voc-hf
 

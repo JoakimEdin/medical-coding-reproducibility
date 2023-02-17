@@ -1,0 +1,11 @@
+- name: SaveBestModelCallback
+  configs:
+    split: val
+    target: all
+    metric: precision@8
+- name: EarlyStoppingCallback
+  configs:
+    split: val
+    target: all
+    metric: precision@8
+    patience: 10

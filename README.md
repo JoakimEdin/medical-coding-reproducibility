@@ -1,7 +1,7 @@
 # ⚕️Automated Medical Coding
 
 ## Introduction 
-Automatic medical coding is the task of automatically assigning diagnosis and procedure codes based on discharge summaries from electronic health records. This repository contains code for easily implementing new automatic medical coding machine learning models. Furthermore, the repository contains new splits for MIMIC-III and the newly released MIMIC-IV. The following models have been implemented:
+Automatic medical coding is the task of automatically assigning diagnosis and procedure codes based on discharge summaries from electronic health records. This repository contains the code used in the paper Automated medical coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study. The repository contains code for training and evaluating medical coding models and new splits for MIMIC-III and the newly released MIMIC-IV. The following models have been implemented:
 
 | Model | Paper | Original Code |
 | ----- | ----- | ------------- |
@@ -12,6 +12,7 @@ Automatic medical coding is the task of automatically assigning diagnosis and pr
 | LAAT | [A Label Attention Model for ICD Coding from Clinical Text](https://arxiv.org/abs/2007.06351) | [link](https://github.com/aehrc/LAAT) |
 | PLM-ICD | [PLM-ICD: Automatic ICD Coding with Pretrained Language Models](https://aclanthology.org/2022.clinicalnlp-1.2/) | [link](https://github.com/MiuLab/PLM-ICD) |
 
+The splits are found in `files/data`. The splits are described in the paper.
 
 ## How to reproduce results
 ### Setup Conda environment
@@ -52,4 +53,26 @@ If you just want to evaluate the models using the provided model_checkpoints you
 
 Example:
 Evaluate PLM-ICD on MIMIC-IV ICD-10 on GPU 1: `python main.py experiment=mimiciv_icd10/plm_icd gpu=1 load_model=path/to/model_checkpoints/mimiciv_icd10/plm_icd epochs=0`
+
+## Overview of the repository
+#### configs
+We use [Hydra](https://hydra.cc/docs/intro/) for configurations. The condigs for every experiment is found in `configs/experiments`. Furthermore, the configuration for the sweeps are found in `configs/sweeps`. We used [Weights and Biases Sweeps](https://docs.wandb.ai/guides/sweeps) for most of our experiments.
+
+#### files
+This is where the images and data is stored.
+
+#### notebooks
+The directory only contains one notebook used for the code analysis. The notebook is not aimed to be used by others, but is included for others to validate our data analysis.
+
+#### prepare_data
+The directory contains all the code for preparing the datasets and generating splits.
+
+#### reports
+This is the code used to generate the plots and tables used in the paper. The code uses the Weights and Biases API to fetch the experiment results. The code is not usable by others, but was included for the possibility to validate our figures and tables.
+
+#### src
+This is were the code for running the experiments is found.
+
+#### tests
+The directory contains the unit tests
 

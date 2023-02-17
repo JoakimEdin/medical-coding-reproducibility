@@ -1,2 +1,0 @@
-PAD_TOKEN = "<PAD>"
-UNKNOWN_TOKEN = "<UNK>"

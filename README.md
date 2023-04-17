@@ -76,3 +76,5 @@ This is were the code for running the experiments is found.
 #### tests
 The directory contains the unit tests
 
+## Acknowledgement
+Thank you Sotiris Lamprinidis for providing an efficient implementation of our multi-label stratification algorithm and some data preprocessing helper functions.

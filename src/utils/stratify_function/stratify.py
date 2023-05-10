@@ -140,6 +140,7 @@ def stratified_train_test_split(
 def iterative_stratification(
     data: list[Any], labels: list[list[str]], ratios: list[float]
 ):
+    # Implemented by Sotiris Lamprinidis
     data = data.copy()
     labels = labels.copy()
     labels_unique = sorted(set([lbl for lbls in labels for lbl in lbls]))

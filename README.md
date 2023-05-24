@@ -1,6 +1,23 @@
-# ⚕️Automated Medical Coding
+# ⚕️Automated Medical Coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study
 
 Official source code repository for the SIGIR 2023 paper [Automated Medical Coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study](https://arxiv.org/abs/2304.10909)
+
+
+```bibtex
+@inproceedings{edinAutomatedMedicalCoding2023,
+  address = {Taipei, Taiwan},
+  title = {Automated {Medical} {Coding} on {MIMIC}-{III} and {MIMIC}-{IV}: {A} {Critical} {Review} and {Replicability} {Study}},
+  isbn = {978-1-4503-9408-6},
+  shorttitle = {Automated {Medical} {Coding} on {MIMIC}-{III} and {MIMIC}-{IV}},
+  doi = {10.1145/3539618.3591918},
+  booktitle = {Proceedings of the 46th {International} {ACM} {SIGIR} {Conference} on {Research} and {Development} in {Information} {Retrieval}},
+  publisher = {ACM Press},
+  author = {Edin, Joakim and Junge, Alexander and Havtorn, Jakob D. and Borgholt, Lasse and Maistro, Maria and Ruotsalo, Tuukka and Maaløe, Lars},
+  year = {2023}
+}
+```
+
+
 
 ## Introduction 
 Automatic medical coding is the task of automatically assigning diagnosis and procedure codes based on discharge summaries from electronic health records. This repository contains the code used in the paper Automated medical coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study. The repository contains code for training and evaluating medical coding models and new splits for MIMIC-III and the newly released MIMIC-IV. The following models have been implemented:

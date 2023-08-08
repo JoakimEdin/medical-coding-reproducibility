@@ -5,7 +5,6 @@ appdirs==1.4.4
 astropy==5.2.1
 asttokens==2.2.1
 attrs==22.2.0
--e git+ssh://git@github.com/JoakimEdin/automatic-medical-coding.git@e13a6817c1bb98ad471d477cd49f4f87dcb0a730#egg=automatic_medical_coding
 backcall==0.2.0
 black==23.1.0
 blake3==0.3.3

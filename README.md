@@ -57,7 +57,8 @@ This code has been developed on MIMIC-IV and MIMIC-IV v2.2.
 ### Before running experiments
 1. Create a weights and biases account. It is possible to run the experiments without wandb.
 2. Download the [model checkpoints](https://drive.google.com/file/d/1hYeJhztAd-JbhqHojY7ZpLtkBcthD8AK/view?usp=share_link) and unzip it. Please note that these model weights can't be used commercially due to the MIMIC License.
-3. If you want to train PLM-ICD, you need to download [RoBERTa-base-PM-M3-Voc](https://dl.fbaipublicfiles.com/biolm/RoBERTa-base-PM-M3-Voc-hf.tar.gz), unzip it and change the `model_path` parameter in `configs/model/plm_icd.yaml` to the path of the download.
+3. If you want to train PLM-ICD, you need to download [RoBERTa-base-PM-M3-Voc](https://dl.fbaipublicfiles.com/biolm/RoBERTa-base-PM-M3-Voc-hf.tar.gz), unzip it and change the `model_path` parameter in `configs/model/plm_icd.yaml` and `configs/text_transform
+/huggingface.yaml` to the path of the download. 
 
 ### Running experiments
 #### Training

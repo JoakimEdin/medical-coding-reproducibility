@@ -107,7 +107,7 @@ class WandbCallback(BaseCallback):
             tags=tags,
             name=trainer.config.name,
             mode=mode,
-            dir=EXPERIMENT_DIR
+            dir=EXPERIMENT_DIR,
             **self.config,
         )
         wandb.watch(trainer.model)

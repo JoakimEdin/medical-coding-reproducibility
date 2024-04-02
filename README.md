@@ -96,6 +96,9 @@ This is were the code for running the experiments is found.
 #### tests
 The directory contains the unit tests
 
+## My setup
+I ran the experiments on one RTX 2080 Ti 11GB per experiment. I had 128 GB RAM on my machine.
+
 ## ⚠️ Known issues 
 * LAAT and PLM-ICD are unstable. The loss will sometimes diverge during training. The issue seems to be overflow in the softmax function in the label-wise attention. Using batch norm or layer norm before the softmax function might solve the issue. We did not try to fix the issue as we didn't want to change the original method during our reproducibility.
 * The code was only tested on a server with 128 GB RAM. A user with 32 GB RAM reported issues fitting MIMIC-IV into memory.

@@ -102,6 +102,7 @@ I ran the experiments on one RTX 2080 Ti 11GB per experiment. I had 128 GB RAM o
 ## ⚠️ Known issues 
 * LAAT and PLM-ICD are unstable. The loss will sometimes diverge during training. The issue seems to be overflow in the softmax function in the label-wise attention. Using batch norm or layer norm before the softmax function might solve the issue. We did not try to fix the issue as we didn't want to change the original method during our reproducibility.
 * The code was only tested on a server with 128 GB RAM. A user with 32 GB RAM reported issues fitting MIMIC-IV into memory.
+* There is an error in the collate function in the Huggingface dataset. The attention mask is being padded with 1s instead of 0s. I have not fixed this issue because I want people to be able to reproduce the results from the paper.
 
 ## Acknowledgement
 Thank you Sotiris Lamprinidis for providing an efficient implementation of our multi-label stratification algorithm and some data preprocessing helper functions.

@@ -17,7 +17,13 @@ Official source code repository for the SIGIR 2023 paper [Automated Medical Codi
 }
 ```
 
-
+## Update
+We released a new [paper](https://arxiv.org/pdf/2406.08958) and [repository](https://github.com/JoakimEdin/explainable-medical-coding/tree/main) for explainable medical coding. The new repository offers the following:
+- **Explainability**: Multiple feature attribution methods and metrics for multi-label classification. 
+- **Implementation of a modified PLM-ICD**: We have fixed the problem of PLM-ICD occasionally collapsing during training.
+- **Huggingface Datasets**: we implemented MIMIC-III, IV, and MDACE as HuggingFace datasets.
+- **Inference code**: We provide code for inference without needing the training dataset.
+The new repository no longer supports CNN, Bi-GRU, CAML, LAAT, and MultiResCNN.
 
 ## Introduction 
 Automatic medical coding is the task of automatically assigning diagnosis and procedure codes based on discharge summaries from electronic health records. This repository contains the code used in the paper Automated medical coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study. The repository contains code for training and evaluating medical coding models and new splits for MIMIC-III and the newly released MIMIC-IV. The following models have been implemented:

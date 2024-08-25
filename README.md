@@ -25,6 +25,8 @@ We released a new [paper](https://arxiv.org/pdf/2406.08958) and [repository](htt
 - **Inference code**: We provide code for inference without needing the training dataset.
 The new repository no longer supports CNN, Bi-GRU, CAML, LAAT, and MultiResCNN.
 
+Also, check out [my blog post](https://substack.com/home/post/p-145913061?source=queue) criticizing popular ideas in automated medical coding. I think it will be interesting for most researchers in the field
+
 ## Introduction 
 Automatic medical coding is the task of automatically assigning diagnosis and procedure codes based on discharge summaries from electronic health records. This repository contains the code used in the paper Automated medical coding on MIMIC-III and MIMIC-IV: A Critical Review and Replicability Study. The repository contains code for training and evaluating medical coding models and new splits for MIMIC-III and the newly released MIMIC-IV. The following models have been implemented:
 

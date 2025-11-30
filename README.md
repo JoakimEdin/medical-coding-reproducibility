@@ -44,7 +44,7 @@ The splits are found in `files/data`. The splits are described in the paper.
 ## How to reproduce results
 ### Setup Conda environment
 1. Create a conda environement `conda create -n coding python=3.10`
-2. Install the packages `pip install . -e`
+2. Install the packages `pip install -e .`
 
 ### Prepare MIMIC-III
 This code has been developed on MIMIC-III v1.4. 
